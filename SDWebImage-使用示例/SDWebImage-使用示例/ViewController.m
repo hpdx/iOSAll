@@ -24,36 +24,40 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
+    // [NSRunLoop currentRunLoop];
+    
+    // [NSRunLoop mainRunLoop];
+    
 }
 
 - (IBAction)showImage:(id)sender {
     
     NSURL * url = [NSURL URLWithString:@"https://ww1.sinaimg.cn/large/0065oQSqly1fsoe3k2gkkj30g50niwla.jpg"];
-    //        [self.photoView sd_setImageWithURL:url];
+    // [self.photoView sd_setImageWithURL:url];
     
-    //    [self.photoView sd_setImageWithURL:url placeholderImage:[UIImage imageNamed:@"p"]];
+    // [self.photoView sd_setImageWithURL:url placeholderImage:[UIImage imageNamed:@"p"]];
     
     [self.photoView sd_setImageWithURL:url placeholderImage:[UIImage imageNamed:@"p"] options:0
-                              progress:^(NSInteger receivedSize, NSInteger expectedSize, NSURL * _Nullable targetURL) {
-        NSLog(@"-->receivedSize = %ld   expectedSize = %ld", receivedSize, expectedSize);
+       progress:^(NSInteger receivedSize, NSInteger expectedSize, NSURL * _Nullable targetURL) {
+         NSLog(@"-->receivedSize = %ld   expectedSize = %ld", receivedSize, expectedSize);
         
-    }
-                             completed:^(UIImage * _Nullable image, NSError * _Nullable error, SDImageCacheType cacheType, NSURL * _Nullable imageURL)
-     {
-        switch (cacheType) {
-            case SDImageCacheTypeNone:
-                NSLog(@"从网络下载");
-                break;
-            case SDImageCacheTypeDisk:
-                NSLog(@"磁盘缓存");
-                break;
-            case SDImageCacheTypeMemory:
-                NSLog(@"内存缓存");
-                break;
-            default:
-                break;
-        }
-    }];
+       }
+       completed:^(UIImage * _Nullable image, NSError * _Nullable error, SDImageCacheType cacheType, NSURL * _Nullable imageURL)
+       {
+            switch (cacheType) {
+                case SDImageCacheTypeNone:
+                    NSLog(@"从网络下载");
+                    break;
+                case SDImageCacheTypeDisk:
+                    NSLog(@"磁盘缓存");
+                    break;
+                case SDImageCacheTypeMemory:
+                    NSLog(@"内存缓存");
+                    break;
+                default:
+                    break;
+            }
+       }];
     
 }
 
@@ -90,13 +94,13 @@
 
 
 - (IBAction)download:(id)sender {
-//    NSURL * imageURL = [NSURL URLWithString:@"https://ww1.sinaimg.cn/large/0065oQSqly1fsmis4zbe7j30sg16fq9o.jpg"];
-//    [[[SDWebImageManager sharedManager] imageLoader] requestImageWithURL:imageURL options:0 context:nil progress:^(NSInteger receivedSize, NSInteger expectedSize, NSURL * _Nullable targetURL) {
-//
-//    } completed:^(UIImage * _Nullable image, NSData * _Nullable data, NSError * _Nullable error, BOOL finished) {
-//        NSLog(@"currentThread = %@" , [NSThread currentThread]);
-//
-//    }];
+    //    NSURL * imageURL = [NSURL URLWithString:@"https://ww1.sinaimg.cn/large/0065oQSqly1fsmis4zbe7j30sg16fq9o.jpg"];
+    //    [[[SDWebImageManager sharedManager] imageLoader] requestImageWithURL:imageURL options:0 context:nil progress:^(NSInteger receivedSize, NSInteger expectedSize, NSURL * _Nullable targetURL) {
+    //
+    //    } completed:^(UIImage * _Nullable image, NSData * _Nullable data, NSError * _Nullable error, BOOL finished) {
+    //        NSLog(@"currentThread = %@" , [NSThread currentThread]);
+    //
+    //    }];
     
     [self gif];
     
