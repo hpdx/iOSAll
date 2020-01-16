@@ -14,6 +14,8 @@
 		A4381A7D23CEBD9A008B0F63 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A4381A7C23CEBD9A008B0F63 /* Assets.xcassets */; };
 		A4381A8023CEBD9A008B0F63 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A4381A7E23CEBD9A008B0F63 /* LaunchScreen.storyboard */; };
 		A4381A8323CEBD9A008B0F63 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A4381A8223CEBD9A008B0F63 /* main.m */; };
+		A4381A8D23D001F0008B0F63 /* Main2.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A4381A8B23D001F0008B0F63 /* Main2.storyboard */; };
+		A4381A9023D0020D008B0F63 /* GCDViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A4381A8F23D0020D008B0F63 /* GCDViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +31,9 @@
 		A4381A7F23CEBD9A008B0F63 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A4381A8123CEBD9A008B0F63 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A4381A8223CEBD9A008B0F63 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		A4381A8C23D001F0008B0F63 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main2.storyboard; sourceTree = "<group>"; };
+		A4381A8E23D0020D008B0F63 /* GCDViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GCDViewController.h; sourceTree = "<group>"; };
+		A4381A8F23D0020D008B0F63 /* GCDViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GCDViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,10 +73,13 @@
 				A4381A7623CEBD9A008B0F63 /* ViewController.h */,
 				A4381A7723CEBD9A008B0F63 /* ViewController.m */,
 				A4381A7923CEBD9A008B0F63 /* Main.storyboard */,
+				A4381A8B23D001F0008B0F63 /* Main2.storyboard */,
 				A4381A7C23CEBD9A008B0F63 /* Assets.xcassets */,
 				A4381A7E23CEBD9A008B0F63 /* LaunchScreen.storyboard */,
 				A4381A8123CEBD9A008B0F63 /* Info.plist */,
 				A4381A8223CEBD9A008B0F63 /* main.m */,
+				A4381A8E23D0020D008B0F63 /* GCDViewController.h */,
+				A4381A8F23D0020D008B0F63 /* GCDViewController.m */,
 			);
 			path = "04.OC-Thread";
 			sourceTree = "<group>";
@@ -135,6 +143,7 @@
 			files = (
 				A4381A8023CEBD9A008B0F63 /* LaunchScreen.storyboard in Resources */,
 				A4381A7D23CEBD9A008B0F63 /* Assets.xcassets in Resources */,
+				A4381A8D23D001F0008B0F63 /* Main2.storyboard in Resources */,
 				A4381A7B23CEBD9A008B0F63 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -149,6 +158,7 @@
 				A4381A7823CEBD9A008B0F63 /* ViewController.m in Sources */,
 				A4381A7223CEBD9A008B0F63 /* AppDelegate.m in Sources */,
 				A4381A8323CEBD9A008B0F63 /* main.m in Sources */,
+				A4381A9023D0020D008B0F63 /* GCDViewController.m in Sources */,
 				A4381A7523CEBD9A008B0F63 /* SceneDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -170,6 +180,14 @@
 				A4381A7F23CEBD9A008B0F63 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		A4381A8B23D001F0008B0F63 /* Main2.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A4381A8C23D001F0008B0F63 /* Base */,
+			);
+			name = Main2.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

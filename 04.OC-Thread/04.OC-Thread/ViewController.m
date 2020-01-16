@@ -16,7 +16,6 @@
 
 @property (weak, nonatomic) IBOutlet UIImageView *photoView;
 
-
 @end
 
 @implementation ViewController
@@ -41,7 +40,6 @@
     Boolean isMainThread2 = [currentThread isMainThread];
     NSLog(@"isMainThread2 = %d", isMainThread2);
     
-    
 }
 
 
@@ -60,10 +58,7 @@
     
     [self createThread5];
     
-    
-    
 }
-
 
 
 #pragma mark - 线程间的通信
@@ -139,7 +134,9 @@
             if(self.totalCount > 0) {
                 NSLog(@"%@，正在卖出%ld张票", param, self.totalCount);
                 self.totalCount = self.totalCount - 1;
-                //                [NSThread sleepForTimeInterval:1.0]; // 暂停1秒
+                
+                // [NSThread sleepForTimeInterval:1.0]; // 暂停1秒
+                // [NSThread sleepUntilDate:[NSDate dateWithTimeIntervalSinceNow:5.0]]; // 暂停5秒
             } else {
                 NSLog(@"%@，老板票已经卖完了", param);
                 break;
@@ -198,14 +195,13 @@
 
 -(void) task {
     NSLog(@"---------------task--------------");
-    
     for(int i = 0; i< 1000; i++) {
         NSThread * currentThread = [NSThread currentThread];
         NSLog(@"i= %d   currentThread = %@", i, currentThread);
         
         if(i == 33) {
             [NSThread exit]; // 强制结束，退出当前线程【被迫死亡】
-            //            break; // 任务结束，结束当前线程【正常死亡】
+            // break; // 任务结束，结束当前线程【正常死亡】
         }
     }
 }
